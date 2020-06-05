@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+main {
+    height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../mountain.jpg");
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    grid-template-rows: 80px 1fr 1fr 150px;
+    grid-template-areas: "navbar image image"
+        "header image image"
+        "header image image"
+        "content1 content2 content2";
+}
+
+.navbar {
+    grid-area: navbar;
+    grid-column: 1/4;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.1rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.navbar>h2 {
+    color: rgb(16, 88, 150);
+}
+
+.navbar>ul>li {
+    display: inline;
+    margin: 0px 25px 0px 25px;
+}
+
+.navbar>ul>li:hover {
+    cursor: pointer;
+}
+
+.navbar>ul>li:nth-child(1) {
+    margin-left: 100px;
+    border-bottom: 4px solid black;
+}
+
+.header {
+    grid-area: header;
+    background-color: white;
+    grid-column: 1/2;
+    grid-row-start: 1;
+    z-index: 1;
+}
+
+.header-content {
+    margin: 15% 0% 0% 40%;
+}
+
+.header-content>h1 {
+    font-size: 5.5rem;
+    font-weight: 700;
+    font-family: 'Allerta Stencil', sans-serif;
+}
+
+.header-content>p {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    padding: 15px;
+    text-align: justify;
+    border-left: 2px solid black;
+    color: #777;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.header-content>button {
+    margin: 25px 0px 0px 10px;
+    background-color: #383838;
+    border: 2px solid black;
+}
+
+.header-content>button:hover {
+    cursor: pointer;
+}
+
+.header-content>button>h4 {
+    font-size: 1rem;
+    padding: 20px 35px;
+    color: whitesmoke;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.image {
+    grid-area: image;
+}
+
+
+.content1 {
+    grid-area: content1;
+    background: linear-gradient(rgba(236, 236, 236, 0.9), rgba(239, 231, 231, 0.9));
+}
+
+.content1>h3 {
+    font-size: 28px;
+    margin: 20px 0px 5px 25%;
+    color: rgb(79, 79, 79);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    font-family: 'Lato', sans-serif;
+}
+
+.list>ul {
+    margin: 0% 5% 0% 5%;
+    list-style-type: none;
+}
+
+.list>ul>li {
+    margin-top: 10px;
+    font-size: 25px;
+    color: #777;
+}
+
+.list>ul>li:nth-child(1) {
+    font-size: 16px;
+    color: black;
+}
+
+.content2 {
+    grid-area: content2;
+    background-color: #383838;
+    grid-column: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content2>h4 {
+    font-size: 20px;
+    color: whitesmoke;
+    font-family: 'Lato', sans-serif;
+}
